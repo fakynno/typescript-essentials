@@ -8,5 +8,7 @@ let todos = [
     new TodoItem(4, "Aprender Inglês")
 ];
 
+let collection = new TodoCollection("Fabio", todos);
+
 console.clear();
-console.log("Lista TODO de Fabio");
+console.log(`Lista TODO de ${collection.userName}`);
