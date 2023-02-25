@@ -13,6 +13,6 @@ let collection = new TodoCollection("Fabio", todos);
 console.clear();
 console.log(`Lista TODO de ${collection.userName}`);
 
-let newId = collection.addTodo("Bora pras cabeça!");
+let newId = collection.addTodo("Fazer academia");
 let todoItem = collection.getTodoById(newId);
-console.log(JSON.stringify);
+console.log(todoItem);
