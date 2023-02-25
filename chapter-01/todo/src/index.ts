@@ -15,4 +15,6 @@ console.log(`Lista TODO de ${collection.userName}`);
 
 let newId = collection.addTodo("Fazer academia");
 let todoItem = collection.getTodoById(newId);
-console.log(todoItem);
+todoItem.printDetails();
+
+collection.addTodo(todoItem);
