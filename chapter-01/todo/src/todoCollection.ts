@@ -2,6 +2,7 @@ import { TodoItem } from "./todoItem";
 
 export class TodoCollection {
     private nextId: number = 1;
+    private itemMap = new Map<number, TodoItem>();
 
     constructor(public userName: string,
         public todoItems: TodoItem[] = []) { }
