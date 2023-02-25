@@ -13,7 +13,7 @@ export class TodoCollection {
         while (this.getTodoById(this.nextId)) {
             this.nextId++;
         }
-        this.todoItems.push(new TodoItem(this.nextId, task));
+        this.itemMap.set(this.nextId, new TodoItem(this.nextId, task))
         return this.nextId;
     }
 
