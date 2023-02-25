@@ -17,4 +17,11 @@ export class TodoCollection {
     getTodoById(id: number): TodoItem {
         return this.todoItems.find(item => item.id === id);
     }
+
+    markComplete(id: number, complete: boolean) {
+        const todoItem = this.getTodoById(id);
+        if (todoItem) {
+            todoItem.complete = complete;
+        }
+    }
 }
