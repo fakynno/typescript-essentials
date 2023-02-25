@@ -85,6 +85,4 @@ tests/cases/user/axios-src/axios-src
 tests/cases/user/prettier/prettier
 .eslintcache
 *v8.log
-chapter-01/todo/dist/index.js
-chapter-01/todo/dist/todoCollection.js
-chapter-01/todo/*
+chapter-01/todo/dist/*
