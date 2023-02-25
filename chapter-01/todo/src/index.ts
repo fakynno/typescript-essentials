@@ -12,5 +12,5 @@ let collection: TodoCollection = new TodoCollection("Fabio", todos);
 
 console.clear();
 console.log(`Lista TODO de ${collection.userName}`);
-
+collection.removeComplete();
 collection.getTodoItems(true).forEach(item => item.printDetails());
