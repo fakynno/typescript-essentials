@@ -16,3 +16,7 @@ function displayTodoList() : void {
                 + `(${ collection.getItemCounts().incomplete } itens para fazer)`);
     collection.getTodoItems(true).forEach(item => item.printDetails());
 }
+
+enum Commands {
+    Quit = 'Sair'
+}
