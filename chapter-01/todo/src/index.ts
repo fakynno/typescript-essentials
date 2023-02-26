@@ -35,3 +35,5 @@ function promptUser(): void {
         }
     })
 }
+
+promptUser();
