@@ -6,7 +6,10 @@ let todos: TodoItem[] = [
     new TodoItem(1, "Estudar Typescript"),
     new TodoItem(2, "Estudar Java"),
     new TodoItem(3, "Tocar Violão", true),
-    new TodoItem(4, "Aprender Inglês")
+    new TodoItem(4, "Aprender Inglês"),
+    new TodoItem(5, "Aprender Espanhol", true),
+    new TodoItem(6, "Aprender Francês"),
+    new TodoItem(7, "Aprender Alemão")
 ];
 
 let collection: TodoCollection = new TodoCollection("Fabio", todos);
@@ -32,9 +35,12 @@ function promptUser(): void {
         message: "Escolha uma opção",
         choices: Object.values(Commands)
     }).then(answers => {
-        if(answers["comando"] !== Commands.Quit) {
-            promptUser();
-        }
+        switch (answers["comando"]) {
+            case Commands.Toggle:
+                showCompleted = !showCompleted;
+                promptUser();
+                break;            
+        }        
     })
 }
 
