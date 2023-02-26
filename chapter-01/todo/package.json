@@ -3,6 +3,6 @@
     "inquirer": "^7.3.3"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.3"
+    "@types/inquirer": "^6.5.0"
   }
 }
