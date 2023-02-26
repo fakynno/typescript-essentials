@@ -1,6 +1,6 @@
 import { TodoItem } from "./todoItem";
 import { TodoCollection } from "./todoCollection";
-import * as inquirer from 'inquirer';
+import * as inquirer from "inquirer";
 
 let todos: TodoItem[] = [
     new TodoItem(1, "Estudar Typescript"),
@@ -24,8 +24,8 @@ enum Commands {
 function promptUser(): void {
     console.clear();
     displayTodoList();
-    inquirer.prompt({
-        type: "listar",
+    inquirer.prompt({        
+        type: "list",
         name: "comando",
         message: "Escolha uma opção",
         choices: Object.values(Commands)
