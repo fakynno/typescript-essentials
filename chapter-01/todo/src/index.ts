@@ -20,3 +20,18 @@ function displayTodoList() : void {
 enum Commands {
     Quit = 'Sair'
 }
+
+function promptUser(): void {
+    console.clear();
+    displayTodoList();
+    inquirer.prompt({
+        type: "listar",
+        name: "comando",
+        message: "Escolha uma opção",
+        choices: Object.values(Commands)
+    }).then(answers => {
+        if(answers["comando"] !== Commands.Quit) {
+            promptUser();
+        }
+    })
+}
