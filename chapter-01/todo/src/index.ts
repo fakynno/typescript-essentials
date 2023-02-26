@@ -11,6 +11,7 @@ let todos: TodoItem[] = [
 let collection: TodoCollection = new TodoCollection("Fabio", todos);
 
 console.clear();
-console.log(`Lista TODO de ${collection.userName}`);
+console.log(`Lista de itens TODO de ${ collection.userName }`
+            + `(${ collection.getItemCounts().incomplete } itens para fazer)`);
 collection.removeComplete();
 collection.getTodoItems(true).forEach(item => item.printDetails());
