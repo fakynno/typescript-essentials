@@ -19,6 +19,7 @@ function displayTodoList() : void {
 }
 
 enum Commands {
+    Toggle = "Exibir/Ocultar concluídos",
     Quit = 'Sair'
 }
 
