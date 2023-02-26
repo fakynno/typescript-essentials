@@ -28,7 +28,8 @@ function promptUser(): void {
         type: "list",
         name: "comando",
         message: "Escolha uma opção",
-        choices: Object.values(Commands)
+        choices: Object.values(Commands),
+        badProperty: true
     }).then(answers => {
         if(answers["comando"] !== Commands.Quit) {
             promptUser();
