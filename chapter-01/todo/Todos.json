@@ -1,0 +1,59 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Estudar Typescript",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "task": "Estudar Java",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "task": "Tocar Violão",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "task": "Aprender Inglês",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "task": "Aprender Espanhol",
+      "complete": true
+    },
+    {
+      "id": 6,
+      "task": "Aprender Francês",
+      "complete": false
+    },
+    {
+      "id": 7,
+      "task": "Aprender Alemão",
+      "complete": false
+    },
+    {
+      "id": 8,
+      "task": "Estudar React",
+      "complete": false
+    },
+    {
+      "id": 9,
+      "task": "Aprender Japonês",
+      "complete": false
+    },
+    {
+      "id": 10,
+      "task": "Aprender Spring Web",
+      "complete": false
+    },
+    {
+      "id": 11,
+      "task": "Aprender Spring Security",
+      "complete": false
+    }
+  ]
+}
