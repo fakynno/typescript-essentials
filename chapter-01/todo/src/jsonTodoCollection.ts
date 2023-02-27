@@ -10,3 +10,20 @@ type schemaType = {
         complete: boolean;
     }
 }[]
+
+export class JsonTodoCollection extends TodoCollection {
+    private database: lowdb.LowdbSync<schemaType>;
+
+    constructor(public userName: string, todoItems: TodoItem[] = []) {
+                super(userName, []);
+                this.database = lowdb(new FileSync("Todos.json"));
+                if (this.database.has("tasks").value()) {
+                    let dbItems = this.database.get("tasks").value();
+                    dbItems.forEach(item => this.itemMap.set(item.id,
+                        new TodoItem(item.id, item.task, item.complete)));
+                } else {
+                    this.database.set("tasks", todoItems).write();
+                    todoItems.forEach(item => this.itemMap.set(item.id, item));
+                }
+            }
+}
