@@ -32,6 +32,11 @@ export class JsonTodoCollection extends TodoCollection {
         this.storeTasks();
         return result;
     }
+
+    markComplete(id: number, complete: boolean): void {
+        super.markComplete(id, complete);
+        this.storeTasks();
+    }
     
     private storeTasks() {
         this.database.set("tasks", [...this.itemMap.values()]).write();
