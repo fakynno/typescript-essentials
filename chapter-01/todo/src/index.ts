@@ -23,7 +23,9 @@ function displayTodoList() : void {
 
 enum Commands {
     Add = "Adicionar nova tarefa",
+    Complete = "Completar uma tarefa",
     Toggle = "Exibir/Ocultar concluídos",
+    Purge = "Remover tarefas concluídas",
     Quit = 'Sair'
 }
 
