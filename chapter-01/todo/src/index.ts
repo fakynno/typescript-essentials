@@ -43,6 +43,23 @@ function promptAdd() : void {
     })
 }
 
+function promptComplete() : void {
+    console.clear();
+    inquirer.prompt({
+        type: "checkbox",
+        name: "completo",
+        message: "Marcar tarefa como concluída",
+        choices: collection.getTodoItems(showCompleted).map(item => 
+            ({name: item.task, value: item.id, checked: item.complete}))
+    }).then(answers => {
+        let completedTasks = answers["completo"] as number[];
+        collection.getTodoItems(true).forEach(item => 
+            collection.markComplete(item.id,
+                completedTasks.find(id => id === item.id) !== undefined));
+        promptUser();
+    })
+}
+
 function promptUser(): void {
     console.clear();
     displayTodoList();
