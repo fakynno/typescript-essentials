@@ -77,6 +77,17 @@ function promptUser(): void {
             case Commands.Add:
                 promptAdd();
                 break;
+            case Commands.Complete:
+                if (collection.getItemCounts().incomplete > 0) {
+                    promptComplete();
+                } else {
+                    promptUser();
+                }
+                break;
+            case Commands.Purge:
+                collection.removeComplete();
+                promptUser();
+                break;
         }        
     })
 }
