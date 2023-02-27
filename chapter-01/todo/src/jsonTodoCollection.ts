@@ -26,4 +26,9 @@ export class JsonTodoCollection extends TodoCollection {
                     todoItems.forEach(item => this.itemMap.set(item.id, item));
                 }
             }
+
+    
+    private storeTasks() {
+        this.database.set("tasks", [...this.itemMap.values()]).write();
+    }
 }
