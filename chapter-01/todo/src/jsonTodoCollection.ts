@@ -27,6 +27,11 @@ export class JsonTodoCollection extends TodoCollection {
                 }
             }
 
+    addTodo(task: string): number {
+        let result = super.addTodo(task);
+        this.storeTasks();
+        return result;
+    }
     
     private storeTasks() {
         this.database.set("tasks", [...this.itemMap.values()]).write();
