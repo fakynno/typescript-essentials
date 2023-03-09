@@ -15,6 +15,16 @@ console.log(`Preço total: ${ precoTotal }; variável é do tipo:  ${ typeof pre
 precoTotal = somaPrecos(100, 200);
 console.log(`Preço total: ${ precoTotal }; variável é do tipo:  ${ typeof precoTotal}`);
 
+console.log('-----------------------');
+let precoTotal2 = somaPrecos2(precoBotas, precoChapeu);
+// let precoTotal = Number(precoBotas) + Number(precoChapeu);
+console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof precoTotal2 }`);
+
+precoTotal2 = somaPrecos2(100, 200, 300);
+console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof precoTotal2 }`);
+
+precoTotal2 = somaPrecos2(100, 200);
+console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof precoTotal2 }`);
 
 let valorTaxa; // não foi definido valor da taxa
 console.log(`Valor da taxa antes: ${ valorTaxa ?? 10}%`);
@@ -41,4 +51,10 @@ console.log(`Cidade: ${ segundaCidade }`);
 
 function somaPrecos(primeiro, segundo, terceiro = 0) {
     return primeiro + segundo + terceiro;
+}
+
+function somaPrecos2(...numeros) {
+    return numeros.reduce(function(total, valor) {
+        return total + valor
+    }, 0);
 }
