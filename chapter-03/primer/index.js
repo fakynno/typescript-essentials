@@ -54,7 +54,6 @@ function somaPrecos(primeiro, segundo, terceiro = 0) {
 }
 
 function somaPrecos2(...numeros) {
-    return numeros.reduce(function(total, valor) {
-        return total + (Number.isNaN(Number(valor)) ? 0 : Number(valor));
-    }, 0);
+    return numeros.reduce((total, valor) => 
+        total + (Number.isNaN(Number(valor)) ? 0 : Number(valor)));    
 }
