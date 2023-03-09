@@ -5,9 +5,9 @@ console.log(`Preço das Botas: R$ ${precoBotas},00`);
 console.log('*********************');
 
 let valorTaxa; // não foi definido valor da taxa
-console.log(`Valor da taxa antes: ${ valorTaxa || 10}%`);
+console.log(`Valor da taxa antes: ${ valorTaxa ?? 10}%`);
 valorTaxa = 0; // valor zero para a taxa
-console.log(`Valor da taxa depois: ${ valorTaxa || 10 }%`);
+console.log(`Valor da taxa depois: ${ valorTaxa ?? 10 }%`);
 
 if (precoBotas == precoChapeu) {
     console.log('Os preços são iguais');
