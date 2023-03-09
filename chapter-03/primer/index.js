@@ -4,6 +4,9 @@ let precoBotas = "100";
 console.log(`Preço das Botas: R$ ${precoBotas},00`);
 console.log('*********************');
 
+let somaDosPrecos = (...numeros) => numeros.reduce((total, valor) =>
+    total + (Number.isNaN(Number(valor)) ? 0 : Number(valor)));
+
 console.log('*********************');
 let precoTotal = somaPrecos(precoBotas, precoChapeu);
 // let precoTotal = Number(precoBotas) + Number(precoChapeu);
