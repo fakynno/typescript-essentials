@@ -4,6 +4,18 @@ let precoBotas = "100";
 console.log(`Preço das Botas: R$ ${precoBotas},00`);
 console.log('*********************');
 
+console.log('*********************');
+let precoTotal = somaPrecos(precoBotas, precoChapeu);
+// let precoTotal = Number(precoBotas) + Number(precoChapeu);
+console.log(`Preço total: ${ precoTotal } ${ typeof precoTotal }`);
+
+precoTotal = somaPrecos(100, 200, 300);
+console.log(`Preço total: ${ precoTotal } ${ typeof precoTotal }`);
+
+precoTotal = somaPrecos(100, 200);
+console.log(`Preço total: ${ precoTotal } ${ typeof precoTotal}`);
+
+
 let valorTaxa; // não foi definido valor da taxa
 console.log(`Valor da taxa antes: ${ valorTaxa ?? 10}%`);
 valorTaxa = 0; // valor zero para a taxa
@@ -19,10 +31,6 @@ if (precoBotas == precoChapeu) {
     console.log('Os Preços são diferentes');
 }
 
-console.log('*********************');
-let precoTotal = somaPrecos(precoBotas, precoChapeu);
-// let precoTotal = Number(precoBotas) + Number(precoChapeu);
-console.log(`Função - Preço total: ${precoTotal}`);
 
 let nome = "Fabio";
 console.log(`Tipo: ${typeof nome}`);
