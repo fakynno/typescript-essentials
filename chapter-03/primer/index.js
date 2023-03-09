@@ -23,7 +23,7 @@ console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof pr
 precoTotal2 = somaPrecos2(100, 200, 300);
 console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof precoTotal2 }`);
 
-precoTotal2 = somaPrecos2(100, 200);
+precoTotal2 = somaPrecos2(100, 200, undefined, false, 'olá');
 console.log(`Preço total: ${ precoTotal2 }; variável é do tipo:  ${ typeof precoTotal2 }`);
 
 let valorTaxa; // não foi definido valor da taxa
@@ -55,6 +55,6 @@ function somaPrecos(primeiro, segundo, terceiro = 0) {
 
 function somaPrecos2(...numeros) {
     return numeros.reduce(function(total, valor) {
-        return total + valor
+        return total + (Number.isNaN(Number(valor)) ? 0 : Number(valor));
     }, 0);
 }
