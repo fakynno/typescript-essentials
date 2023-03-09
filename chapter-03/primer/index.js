@@ -9,6 +9,10 @@ console.log(`Valor da taxa antes: ${ valorTaxa ?? 10}%`);
 valorTaxa = 0; // valor zero para a taxa
 console.log(`Valor da taxa depois: ${ valorTaxa ?? 10 }%`);
 
+function somaPrecos(primeiro, segundo, terceiro) {
+    return primeiro + segundo + terceiro;
+}
+
 if (precoBotas == precoChapeu) {
     console.log('Os preços são iguais');
 } else {
@@ -16,8 +20,9 @@ if (precoBotas == precoChapeu) {
 }
 
 console.log('*********************');
-let precoTotal = Number(precoBotas) + Number(precoChapeu);
-console.log(`Preço total: ${precoTotal}`);
+let precoTotal = somaPrecos(precoBotas, precoChapeu);
+// let precoTotal = Number(precoBotas) + Number(precoChapeu);
+console.log(`Função - Preço total: ${precoTotal}`);
 
 let nome = "Fabio";
 console.log(`Tipo: ${typeof nome}`);
